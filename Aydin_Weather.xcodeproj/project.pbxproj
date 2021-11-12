@@ -11,7 +11,7 @@
 		DB6C6F2C273E0D8E0057DBE8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C6F2B273E0D8E0057DBE8 /* ContentView.swift */; };
 		DB6C6F2E273E0D8F0057DBE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB6C6F2D273E0D8F0057DBE8 /* Assets.xcassets */; };
 		DB6C6F31273E0D8F0057DBE8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB6C6F30273E0D8F0057DBE8 /* Preview Assets.xcassets */; };
-		DB6C6F38273E12DD0057DBE8 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DB6C6F37273E12DD0057DBE8 /* Info.plist */; };
+		DB6C6F3B273E13FA0057DBE8 /* LocationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C6F3A273E13FA0057DBE8 /* LocationHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,7 +20,7 @@
 		DB6C6F2B273E0D8E0057DBE8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DB6C6F2D273E0D8F0057DBE8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB6C6F30273E0D8F0057DBE8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		DB6C6F37273E12DD0057DBE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB6C6F3A273E13FA0057DBE8 /* LocationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,11 +53,11 @@
 		DB6C6F28273E0D8E0057DBE8 /* Aydin_Weather */ = {
 			isa = PBXGroup;
 			children = (
+				DB6C6F39273E13E70057DBE8 /* Helpers */,
 				DB6C6F29273E0D8E0057DBE8 /* Aydin_WeatherApp.swift */,
 				DB6C6F2B273E0D8E0057DBE8 /* ContentView.swift */,
 				DB6C6F2D273E0D8F0057DBE8 /* Assets.xcassets */,
 				DB6C6F2F273E0D8F0057DBE8 /* Preview Content */,
-				DB6C6F37273E12DD0057DBE8 /* Info.plist */,
 			);
 			path = Aydin_Weather;
 			sourceTree = "<group>";
@@ -68,6 +68,14 @@
 				DB6C6F30273E0D8F0057DBE8 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DB6C6F39273E13E70057DBE8 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				DB6C6F3A273E13FA0057DBE8 /* LocationHelper.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,7 +138,6 @@
 			files = (
 				DB6C6F31273E0D8F0057DBE8 /* Preview Assets.xcassets in Resources */,
 				DB6C6F2E273E0D8F0057DBE8 /* Assets.xcassets in Resources */,
-				DB6C6F38273E12DD0057DBE8 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +148,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB6C6F3B273E13FA0057DBE8 /* LocationHelper.swift in Sources */,
 				DB6C6F2C273E0D8E0057DBE8 /* ContentView.swift in Sources */,
 				DB6C6F2A273E0D8E0057DBE8 /* Aydin_WeatherApp.swift in Sources */,
 			);
@@ -276,6 +284,8 @@
 				DEVELOPMENT_TEAM = CGV7KX4AP5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "The app needs location permission to be provide you optimized experience.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "The app needs location permission to be provide you optimized experience.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -305,6 +315,8 @@
 				DEVELOPMENT_TEAM = CGV7KX4AP5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "The app needs location permission to be provide you optimized experience.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "The app needs location permission to be provide you optimized experience.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
