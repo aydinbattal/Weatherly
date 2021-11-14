@@ -8,9 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var weatherHelper : WeatherHelper
+
     var body: some View {
         Text("Hello, world!")
             .padding()
+        Button("Fetch") {
+            print(#function, weatherHelper.weatherInfo)
+        }
     }
 }
 

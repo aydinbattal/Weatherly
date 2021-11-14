@@ -12,7 +12,7 @@
 		DB6C6F2E273E0D8F0057DBE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB6C6F2D273E0D8F0057DBE8 /* Assets.xcassets */; };
 		DB6C6F31273E0D8F0057DBE8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB6C6F30273E0D8F0057DBE8 /* Preview Assets.xcassets */; };
 		DB6C6F3B273E13FA0057DBE8 /* LocationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C6F3A273E13FA0057DBE8 /* LocationHelper.swift */; };
-		DB6C6F3D273F76D70057DBE8 /* ApiHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C6F3C273F76D70057DBE8 /* ApiHelper.swift */; };
+		DB6C6F3D273F76D70057DBE8 /* WeatherHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C6F3C273F76D70057DBE8 /* WeatherHelper.swift */; };
 		DB6C6F40273F79500057DBE8 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C6F3F273F79500057DBE8 /* Weather.swift */; };
 /* End PBXBuildFile section */
 
@@ -23,7 +23,7 @@
 		DB6C6F2D273E0D8F0057DBE8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB6C6F30273E0D8F0057DBE8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DB6C6F3A273E13FA0057DBE8 /* LocationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationHelper.swift; sourceTree = "<group>"; };
-		DB6C6F3C273F76D70057DBE8 /* ApiHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiHelper.swift; sourceTree = "<group>"; };
+		DB6C6F3C273F76D70057DBE8 /* WeatherHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherHelper.swift; sourceTree = "<group>"; };
 		DB6C6F3F273F79500057DBE8 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,7 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				DB6C6F3A273E13FA0057DBE8 /* LocationHelper.swift */,
-				DB6C6F3C273F76D70057DBE8 /* ApiHelper.swift */,
+				DB6C6F3C273F76D70057DBE8 /* WeatherHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -162,7 +162,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB6C6F3D273F76D70057DBE8 /* ApiHelper.swift in Sources */,
+				DB6C6F3D273F76D70057DBE8 /* WeatherHelper.swift in Sources */,
 				DB6C6F3B273E13FA0057DBE8 /* LocationHelper.swift in Sources */,
 				DB6C6F2C273E0D8E0057DBE8 /* ContentView.swift in Sources */,
 				DB6C6F2A273E0D8E0057DBE8 /* Aydin_WeatherApp.swift in Sources */,

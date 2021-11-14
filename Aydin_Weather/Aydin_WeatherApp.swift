@@ -11,10 +11,13 @@ import SwiftUI
 struct Aydin_WeatherApp: App {
     
     let locationHelper = LocationHelper()
-    
+    let weatherHelper = WeatherHelper()
+
     var body: some Scene {
         WindowGroup {
-            ContentView().environmentObject(locationHelper)
+            ContentView()
+                .environmentObject(locationHelper)
+                .environmentObject(weatherHelper)
         }
     }
 }
