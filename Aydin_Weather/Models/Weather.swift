@@ -26,6 +26,8 @@ struct Weather : Codable{
     let uv: Int
     let visKm: Double
     let conditionText: String
+    let imageURL: URL?
+    var image: UIImage?
     
     enum WeatherKeys: String, CodingKey{
         case location
@@ -51,6 +53,7 @@ struct Weather : Codable{
             
             enum ConditionKeys: String, CodingKey{
                 case text
+                case icon
             }
         }
     }
@@ -81,7 +84,7 @@ struct Weather : Codable{
         let conditionContainer = try currentContainer.nestedContainer(keyedBy: WeatherKeys.CurrentKeys.ConditionKeys.self, forKey: .condition)
         
         self.conditionText = try conditionContainer.decodeIfPresent(String.self, forKey: .text) ?? "Unavailable"
-
+        self.imageURL = try conditionContainer.decodeIfPresent(URL.self, forKey: .icon)
     }
     
     func encode(to encoder: Encoder) throws {

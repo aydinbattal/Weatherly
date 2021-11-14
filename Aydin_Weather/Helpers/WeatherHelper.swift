@@ -60,12 +60,37 @@ class WeatherHelper : ObservableObject{
                                         
                                         
                                         //indicates that you are expecting a single JSON object from API
-                                        let decodedWeatherInfo = try decoder.decode(Weather.self, from: jsonData)
-                                        print(#function, decodedWeatherInfo)
+                                        var decodedWeatherInfo = try decoder.decode(Weather.self, from: jsonData)
                                         
-                                        DispatchQueue.main.async {
-                                            self.weatherInfo = decodedWeatherInfo
+                                        if (decodedWeatherInfo.imageURL != nil){
+                                            //initiate network call to get image
+//                                            let imgStr = decodedWeatherInfo.imageURL?.absoluteString.replacingOccurrences(of: "//", with: "")
+//                                            let imgUrl = URL(string: imgStr!)
+                                            
+                                            let imgStr = "https:" + decodedWeatherInfo.imageURL!.absoluteString
+                                            let imgUrl = URL(string: imgStr)
+    
+                                            self.fetchImage(from: imgUrl!, withCompletion: { data in
+                                                
+                                                guard let imageData = data else{
+                                                    print(#function, "Image data not obtained")
+                                                    return
+                                                }
+                                                
+                                                
+                                                decodedWeatherInfo.image = UIImage(data: imageData)
+                                                
+                                                DispatchQueue.main.async {
+                                                    self.weatherInfo = decodedWeatherInfo
+                                                }
+                                            })
+                                            print(#function, self.weatherInfo)
+//                                            DispatchQueue.main.async {
+//                                                self.weatherInfo = decodedWeatherInfo
+//                                            }
                                         }
+                                        
+                                        
                                         
                                     }else{
                                         print(#function, "No JSON data recieved from API")
@@ -82,6 +107,21 @@ class WeatherHelper : ObservableObject{
                 }
             }
         }.resume()
+        
+    }
+    
+    private func fetchImage(from url: URL, withCompletion completion: @escaping (Data?) -> Void){
+        
+        let task = URLSession.shared.dataTask(with: url, completionHandler: { (data: Data?, response: URLResponse?, error: Error?) -> Void in
+            
+            if (data != nil){
+                DispatchQueue.main.async {
+                    completion(data)
+                }
+            }
+        })
+        
+        task.resume()
         
     }
 }
