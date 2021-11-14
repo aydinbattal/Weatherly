@@ -11,22 +11,12 @@ import UIKit
 class WeatherHelper : ObservableObject{
     @Published var weatherInfo : Weather?
     //https://api.weatherapi.com/v1/current.json?key=db097f9288f14f46bf142323211311&q=+40.75921100,-73.98463800
-    var apiKey = "db097f9288f14f46bf142323211311"
+//    var apiKey = "db097f9288f14f46bf142323211311"
 //    var apiURL = "https://api.weatherapi.com/v1/current.json?key=db097f9288f14f46bf142323211311&q="
     
     init(){
-//        self.fetchDataFromAPI()
     }
-    
-    //https://api.spacexdata.com/v4/launches/city=florida
-    //    func fetchDataFromAPI(string cityName){
-    ////        apiURL = apiURL + "/city=\(cityName)"
-    //
-    //        guard let api = URL(string: apiURL) else{
-    //            print(#function, "Unable to obtain URL from String")
-    //            return
-    //        }
-    //    }
+
     
     
     func fetchDataFromAPI(lat : Double, lon : Double){
@@ -85,9 +75,6 @@ class WeatherHelper : ObservableObject{
                                                 }
                                             })
                                             print(#function, self.weatherInfo)
-//                                            DispatchQueue.main.async {
-//                                                self.weatherInfo = decodedWeatherInfo
-//                                            }
                                         }
                                         
                                         
