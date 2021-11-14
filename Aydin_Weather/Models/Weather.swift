@@ -16,15 +16,15 @@ struct Weather : Codable{
     let name: String
     let region: String
     let country: String
-    let lat: Float
-    let lon: Float
-    let temp: Float
-    let feelslike: Float
-    let windKph: Float
+    let lat: Double
+    let lon: Double
+    let temp: Double
+    let feelslike: Double
+    let windKph: Double
     let windDir: String
     let humidity: Int
     let uv: Int
-    let visKm: Int
+    let visKm: Double
     let conditionText: String
     
     enum WeatherKeys: String, CodingKey{
@@ -65,18 +65,18 @@ struct Weather : Codable{
         self.name = try locationContainer.decodeIfPresent(String.self, forKey: .name) ?? "Unavailable"
         self.region = try locationContainer.decodeIfPresent(String.self, forKey: .region) ?? "Unavailable"
         self.country = try locationContainer.decodeIfPresent(String.self, forKey: .country) ?? "Unavailable"
-        self.lat = try locationContainer.decodeIfPresent(Float.self, forKey: .lat) ?? 0.0
-        self.lon = try locationContainer.decodeIfPresent(Float.self, forKey: .lon) ?? 0.0
+        self.lat = try locationContainer.decodeIfPresent(Double.self, forKey: .lat) ?? 0.0
+        self.lon = try locationContainer.decodeIfPresent(Double.self, forKey: .lon) ?? 0.0
         
         let currentContainer = try weatherContainer.nestedContainer(keyedBy: WeatherKeys.CurrentKeys.self, forKey: .current)
         
-        self.temp = try currentContainer.decodeIfPresent(Float.self, forKey: .temp) ?? 0.0
-        self.feelslike = try currentContainer.decodeIfPresent(Float.self, forKey: .feelslike) ?? 0.0
-        self.windKph = try currentContainer.decodeIfPresent(Float.self, forKey: .windKph) ?? 0.0
+        self.temp = try currentContainer.decodeIfPresent(Double.self, forKey: .temp) ?? 0.0
+        self.feelslike = try currentContainer.decodeIfPresent(Double.self, forKey: .feelslike) ?? 0.0
+        self.windKph = try currentContainer.decodeIfPresent(Double.self, forKey: .windKph) ?? 0.0
         self.windDir = try currentContainer.decodeIfPresent(String.self, forKey: .windDir) ?? "Unavailable"
         self.humidity = try currentContainer.decodeIfPresent(Int.self, forKey: .humidity) ?? 0
         self.uv = try currentContainer.decodeIfPresent(Int.self, forKey: .uv) ?? 0
-        self.visKm = try currentContainer.decodeIfPresent(Int.self, forKey: .visKm) ?? 0
+        self.visKm = try currentContainer.decodeIfPresent(Double.self, forKey: .visKm) ?? 0.0
         
         let conditionContainer = try currentContainer.nestedContainer(keyedBy: WeatherKeys.CurrentKeys.ConditionKeys.self, forKey: .condition)
         

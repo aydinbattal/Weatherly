@@ -12,10 +12,10 @@ class WeatherHelper : ObservableObject{
     @Published var weatherInfo : Weather?
     //https://api.weatherapi.com/v1/current.json?key=db097f9288f14f46bf142323211311&q=+40.75921100,-73.98463800
     var apiKey = "db097f9288f14f46bf142323211311"
-    var apiURL = "https://api.weatherapi.com/v1/current.json?key=db097f9288f14f46bf142323211311&q=+40.75921100,-73.98463800"
+//    var apiURL = "https://api.weatherapi.com/v1/current.json?key=db097f9288f14f46bf142323211311&q="
     
     init(){
-        self.fetchDataFromAPI()
+//        self.fetchDataFromAPI()
     }
     
     //https://api.spacexdata.com/v4/launches/city=florida
@@ -29,12 +29,16 @@ class WeatherHelper : ObservableObject{
     //    }
     
     
-    func fetchDataFromAPI(){
+    func fetchDataFromAPI(lat : Double, lon : Double){
+        var apiURL = "https://api.weatherapi.com/v1/current.json?key=db097f9288f14f46bf142323211311&q="
+        
+        apiURL = apiURL + "\(lat)," + "\(lon)"
+        
         guard let api = URL(string: apiURL) else{
             print(#function, "Unable to obtain URL from String")
             return
         }
-        
+        print("api", api)
         //Initiate Network call
         URLSession.shared.dataTask(with: api) {(data: Data?, response: URLResponse?, error: Error?) in
             

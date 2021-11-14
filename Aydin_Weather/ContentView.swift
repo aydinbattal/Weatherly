@@ -8,14 +8,36 @@
 import SwiftUI
 
 struct ContentView: View {
-    @EnvironmentObject var weatherHelper : WeatherHelper
+    @EnvironmentObject var weatherFetcher : WeatherHelper
+    @EnvironmentObject var locationFetcher : LocationHelper
 
     var body: some View {
-        Text("Hello, world!")
-            .padding()
-        Button("Fetch") {
-            print(#function, weatherHelper.weatherInfo)
+        VStack{
+            if(self.locationFetcher.currentLocation != nil){
+                List{
+                Section(header: Text("Location Information")) {
+                    Text("Latitude: \( self.locationFetcher.currentLocation!.coordinate.latitude)")
+                    Text("Longtitude: \( self.locationFetcher.currentLocation!.coordinate.longitude)")
+                }
+                }
+                
+                Button(action: {
+                    self.weatherFetcher.fetchDataFromAPI(lat: self.locationFetcher.currentLocation!.coordinate.latitude, lon: self.locationFetcher.currentLocation!.coordinate.longitude)
+                }){
+                    Text("Fetch")
+                        
+                }
+                
+                
+            }else{
+                Text("Obtaining user location...")
+            }
         }
+        .onAppear(){
+            self.locationFetcher.checkPermission()
+        }
+        
+    
     }
 }
 
