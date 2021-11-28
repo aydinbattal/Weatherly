@@ -42,7 +42,15 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     
     func getCurrentTimelineEntry(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationTimelineEntry?) -> Void) {
         // Call the handler with the current timeline entry
-        handler(nil)
+        
+        let iconImage = UIImage(systemName: "cloud.sun.fill", withConfiguration: UIImage.SymbolConfiguration(pointSize: 35, weight: .regular, scale: .medium))?.withTintColor(.white)
+        
+        let template = CLKComplicationTemplateGraphicCircularImage(imageProvider: CLKFullColorImageProvider(fullColorImage: iconImage!))
+        
+        var entries = [CLKComplicationTimelineEntry]()
+        entries.append(CLKComplicationTimelineEntry(date: Date(), complicationTemplate: template))
+        
+        handler(entries.first)
     }
     
     func getTimelineEntries(for complication: CLKComplication, after date: Date, limit: Int, withHandler handler: @escaping ([CLKComplicationTimelineEntry]?) -> Void) {
