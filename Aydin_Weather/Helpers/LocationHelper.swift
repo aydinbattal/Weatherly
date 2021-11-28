@@ -3,7 +3,7 @@
 //  Aydin_Weather
 //
 //  Created by Aydin Battal on 2021-11-11.
-//
+//  991521740
 
 import Foundation
 import CoreLocation
@@ -93,17 +93,17 @@ class LocationHelper: NSObject, ObservableObject, CLLocationManagerDelegate{
         print(#function, "Error \(error.localizedDescription)")
     }
     
-    func addPinToMapView(mapView: MKMapView, coordinates: CLLocationCoordinate2D, title: String?){
-        let mapAnnotation = MKPointAnnotation()
-        mapAnnotation.coordinate = coordinates
-        
-        if let title = title{
-            mapAnnotation.title = title
-        }else{
-            mapAnnotation.title = self.address
-        }
-        
-        mapView.addAnnotation(mapAnnotation)
-    }
+//    func addPinToMapView(mapView: MKMapView, coordinates: CLLocationCoordinate2D, title: String?){
+//        let mapAnnotation = MKPointAnnotation()
+//        mapAnnotation.coordinate = coordinates
+//        
+//        if let title = title{
+//            mapAnnotation.title = title
+//        }else{
+//            mapAnnotation.title = self.address
+//        }
+//        
+//        mapView.addAnnotation(mapAnnotation)
+//    }
 
 }

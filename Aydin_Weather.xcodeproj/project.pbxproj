@@ -24,6 +24,9 @@
 		DBC6DDFE275341F7005CBC83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBC6DDFD275341F7005CBC83 /* Assets.xcassets */; };
 		DBC6DE01275341F7005CBC83 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBC6DE00275341F7005CBC83 /* Preview Assets.xcassets */; };
 		DBC6DE06275341F7005CBC83 /* ActivityWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = DBC6DDE6275341F3005CBC83 /* ActivityWatch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		DBC6DE0F2753476E005CBC83 /* LocationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C6F3A273E13FA0057DBE8 /* LocationHelper.swift */; };
+		DBC6DE1027534772005CBC83 /* WeatherHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C6F3C273F76D70057DBE8 /* WeatherHelper.swift */; };
+		DBC6DE11275348BA005CBC83 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C6F3F273F79500057DBE8 /* Weather.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -350,10 +353,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBC6DE11275348BA005CBC83 /* Weather.swift in Sources */,
+				DBC6DE0F2753476E005CBC83 /* LocationHelper.swift in Sources */,
 				DBC6DDF8275341F6005CBC83 /* NotificationController.swift in Sources */,
 				DBC6DDF6275341F6005CBC83 /* ContentView.swift in Sources */,
 				DBC6DDFC275341F6005CBC83 /* ComplicationController.swift in Sources */,
 				DBC6DDF4275341F6005CBC83 /* Aydin_WeatherApp.swift in Sources */,
+				DBC6DE1027534772005CBC83 /* WeatherHelper.swift in Sources */,
 				DBC6DDFA275341F6005CBC83 /* NotificationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
