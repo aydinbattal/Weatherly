@@ -27,6 +27,11 @@
 		DBC6DE0F2753476E005CBC83 /* LocationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C6F3A273E13FA0057DBE8 /* LocationHelper.swift */; };
 		DBC6DE1027534772005CBC83 /* WeatherHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C6F3C273F76D70057DBE8 /* WeatherHelper.swift */; };
 		DBC6DE11275348BA005CBC83 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C6F3F273F79500057DBE8 /* Weather.swift */; };
+		DBC6DE19275427C9005CBC83 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBC6DE18275427C9005CBC83 /* WidgetKit.framework */; };
+		DBC6DE1B275427C9005CBC83 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DBC6DE1A275427C9005CBC83 /* SwiftUI.framework */; };
+		DBC6DE1E275427C9005CBC83 /* ActivityWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC6DE1D275427C9005CBC83 /* ActivityWidget.swift */; };
+		DBC6DE20275427CC005CBC83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBC6DE1F275427CC005CBC83 /* Assets.xcassets */; };
+		DBC6DE24275427CC005CBC83 /* ActivityWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = DBC6DE16275427C9005CBC83 /* ActivityWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +48,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = DBC6DDE5275341F3005CBC83;
 			remoteInfo = ActivityWatch;
+		};
+		DBC6DE22275427CC005CBC83 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DB6C6F1E273E0D8E0057DBE8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DBC6DE15275427C9005CBC83;
+			remoteInfo = ActivityWidgetExtension;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -65,6 +77,17 @@
 			dstSubfolderSpec = 13;
 			files = (
 				DBC6DDEF275341F6005CBC83 /* ActivityWatch WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBC6DE28275427CC005CBC83 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				DBC6DE24275427CC005CBC83 /* ActivityWidgetExtension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -92,6 +115,12 @@
 		DBC6DE00275341F7005CBC83 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DBC6DE02275341F7005CBC83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DBC6DE03275341F7005CBC83 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		DBC6DE16275427C9005CBC83 /* ActivityWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ActivityWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBC6DE18275427C9005CBC83 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		DBC6DE1A275427C9005CBC83 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		DBC6DE1D275427C9005CBC83 /* ActivityWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityWidget.swift; sourceTree = "<group>"; };
+		DBC6DE1F275427CC005CBC83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DBC6DE21275427CC005CBC83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +138,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DBC6DE13275427C9005CBC83 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBC6DE1B275427C9005CBC83 /* SwiftUI.framework in Frameworks */,
+				DBC6DE19275427C9005CBC83 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -118,6 +156,8 @@
 				DB6C6F28273E0D8E0057DBE8 /* Aydin_Weather */,
 				DBC6DDE7275341F3005CBC83 /* ActivityWatch */,
 				DBC6DDF2275341F6005CBC83 /* ActivityWatch WatchKit Extension */,
+				DBC6DE1C275427C9005CBC83 /* ActivityWidget */,
+				DBC6DE17275427C9005CBC83 /* Frameworks */,
 				DB6C6F27273E0D8E0057DBE8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -128,6 +168,7 @@
 				DB6C6F26273E0D8E0057DBE8 /* Aydin_Weather.app */,
 				DBC6DDE6275341F3005CBC83 /* ActivityWatch.app */,
 				DBC6DDEE275341F6005CBC83 /* ActivityWatch WatchKit Extension.appex */,
+				DBC6DE16275427C9005CBC83 /* ActivityWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -210,6 +251,25 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		DBC6DE17275427C9005CBC83 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DBC6DE18275427C9005CBC83 /* WidgetKit.framework */,
+				DBC6DE1A275427C9005CBC83 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DBC6DE1C275427C9005CBC83 /* ActivityWidget */ = {
+			isa = PBXGroup;
+			children = (
+				DBC6DE1D275427C9005CBC83 /* ActivityWidget.swift */,
+				DBC6DE1F275427CC005CBC83 /* Assets.xcassets */,
+				DBC6DE21275427CC005CBC83 /* Info.plist */,
+			);
+			path = ActivityWidget;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -221,11 +281,13 @@
 				DB6C6F23273E0D8E0057DBE8 /* Frameworks */,
 				DB6C6F24273E0D8E0057DBE8 /* Resources */,
 				DBC6DE07275341F7005CBC83 /* Embed Watch Content */,
+				DBC6DE28275427CC005CBC83 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				DBC6DE05275341F7005CBC83 /* PBXTargetDependency */,
+				DBC6DE23275427CC005CBC83 /* PBXTargetDependency */,
 			);
 			name = Aydin_Weather;
 			productName = Aydin_Weather;
@@ -266,6 +328,23 @@
 			productReference = DBC6DDEE275341F6005CBC83 /* ActivityWatch WatchKit Extension.appex */;
 			productType = "com.apple.product-type.watchkit2-extension";
 		};
+		DBC6DE15275427C9005CBC83 /* ActivityWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DBC6DE25275427CC005CBC83 /* Build configuration list for PBXNativeTarget "ActivityWidgetExtension" */;
+			buildPhases = (
+				DBC6DE12275427C9005CBC83 /* Sources */,
+				DBC6DE13275427C9005CBC83 /* Frameworks */,
+				DBC6DE14275427C9005CBC83 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ActivityWidgetExtension;
+			productName = ActivityWidgetExtension;
+			productReference = DBC6DE16275427C9005CBC83 /* ActivityWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -283,6 +362,9 @@
 						CreatedOnToolsVersion = 13.1;
 					};
 					DBC6DDED275341F6005CBC83 = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					DBC6DE15275427C9005CBC83 = {
 						CreatedOnToolsVersion = 13.1;
 					};
 				};
@@ -303,6 +385,7 @@
 				DB6C6F25273E0D8E0057DBE8 /* Aydin_Weather */,
 				DBC6DDE5275341F3005CBC83 /* ActivityWatch */,
 				DBC6DDED275341F6005CBC83 /* ActivityWatch WatchKit Extension */,
+				DBC6DE15275427C9005CBC83 /* ActivityWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -331,6 +414,14 @@
 			files = (
 				DBC6DE01275341F7005CBC83 /* Preview Assets.xcassets in Resources */,
 				DBC6DDFE275341F7005CBC83 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBC6DE14275427C9005CBC83 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBC6DE20275427CC005CBC83 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,6 +455,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DBC6DE12275427C9005CBC83 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DBC6DE1E275427C9005CBC83 /* ActivityWidget.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -376,6 +475,11 @@
 			isa = PBXTargetDependency;
 			target = DBC6DDE5275341F3005CBC83 /* ActivityWatch */;
 			targetProxy = DBC6DE04275341F7005CBC83 /* PBXContainerItemProxy */;
+		};
+		DBC6DE23275427CC005CBC83 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DBC6DE15275427C9005CBC83 /* ActivityWidgetExtension */;
+			targetProxy = DBC6DE22275427CC005CBC83 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -499,6 +603,7 @@
 		DB6C6F35273E0D8F0057DBE8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -530,6 +635,7 @@
 		DB6C6F36273E0D8F0057DBE8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -672,6 +778,60 @@
 			};
 			name = Release;
 		};
+		DBC6DE26275427CC005CBC83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CGV7KX4AP5;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ActivityWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ActivityWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aydinbattal.Aydin-Weather.ActivityWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DBC6DE27275427CC005CBC83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CGV7KX4AP5;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ActivityWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ActivityWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aydinbattal.Aydin-Weather.ActivityWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -707,6 +867,15 @@
 			buildConfigurations = (
 				DBC6DE08275341F7005CBC83 /* Debug */,
 				DBC6DE09275341F7005CBC83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DBC6DE25275427CC005CBC83 /* Build configuration list for PBXNativeTarget "ActivityWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBC6DE26275427CC005CBC83 /* Debug */,
+				DBC6DE27275427CC005CBC83 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
