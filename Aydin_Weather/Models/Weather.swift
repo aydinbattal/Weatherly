@@ -58,7 +58,43 @@ struct Weather : Codable{
         }
     }
     
+//    init(name: String, region: String, country: String, lat: Double, lon: Double, temp: Double, feelslike: Double, windKph: Double, windDir: String, humidity: Int, uv: Int, visKm: Double, conditionText: String, imageURL: URL, image: UIImage?){
+//        self.name = name
+//        self.region = region
+//        self.country = country
+//        self.lat = lat
+//        self.lon = lon
+//        self.temp = temp
+//        self.feelslike = feelslike
+//        self.windKph = windKph
+//        self.windDir = windDir
+//        self.humidity = humidity
+//        self.uv = uv
+//        self.visKm = visKm
+//        self.conditionText = conditionText
+//        self.imageURL = imageURL
+//        self.image = image
+//
+//    }
     
+    init(){
+        self.name = "unknown"
+        self.region = "unknown"
+        self.country = "unknown"
+        self.lat = 0.0
+        self.lon = 0.0
+        self.temp = 0.0
+        self.feelslike = 0.0
+        self.windKph = 0.0
+        self.windDir = "unknown"
+        self.humidity = 0
+        self.uv = 0
+        self.visKm = 0.0
+        self.conditionText = "unknown"
+        self.imageURL = URL(string: "")
+        self.image = UIImage(systemName: "")
+        
+    }
     
     init(from decoder: Decoder) throws {
         let weatherContainer = try decoder.container(keyedBy: WeatherKeys.self)
